@@ -2,7 +2,7 @@
 
 namespace Alura\Solid\Model;
 
-class AluraPlus extends Video
+class AluraPlus extends Video implements Scorable
 {
     private string $category;
 
@@ -15,5 +15,10 @@ class AluraPlus extends Video
     public function getUrl(): string
     {
         return str_replace(' ', '-', strtolower($this->category));
+    }
+
+    public function getScore(): int
+    {
+        return  $this->durationMinutes() * 2;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Alura\Solid\Model;
 
-class Course
+class Course implements Scorable
 {
     private string $name;
     private array $videos;
@@ -33,5 +33,10 @@ class Course
     public function getVideos(): array
     {
         return $this->videos;
+    }
+
+    public function getScore(): int
+    {
+        return 100;
     }
 }
