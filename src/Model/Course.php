@@ -2,7 +2,7 @@
 
 namespace Alura\Solid\Model;
 
-class Course implements Scorable
+class Course implements Scorable, Watchable
 {
     private string $name;
     private array $videos;
